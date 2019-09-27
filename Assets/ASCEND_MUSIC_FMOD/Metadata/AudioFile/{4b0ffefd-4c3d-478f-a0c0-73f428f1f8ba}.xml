@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{4b0ffefd-4c3d-478f-a0c0-73f428f1f8ba}">
+        <property name="assetPath">
+            <value>ASCEND_MUSIC_DarkAccent_V01_H2C3.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>41.339312499999998</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{7c8839ef-eda4-4e7b-ac1e-6fc501f250f8}</destination>
+        </relationship>
+    </object>
+</objects>
