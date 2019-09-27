@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: eef8d824ea7b63742966aaa0e94ac383, type: 3}
   m_Name: FMODStudioSettings
-  m_EditorClassIdentifier: Assembly-CSharp:FMODUnity:Settings
+  m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: 
-  SourceProjectPathUnformatted: 
-  SourceBankPathUnformatted: 
+  sourceProjectPath: Assets\ASCEND_MUSIC_FMOD.fspro
+  SourceProjectPathUnformatted: Assets\ASCEND_MUSIC_FMOD.fspro
+  SourceBankPathUnformatted: Assets\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -24,10 +24,12 @@ MonoBehaviour:
   LoggingLevel: 2
   SpeakerModeSettings:
   - Platform: 2
-    Value: 3
+    Value: 6
+  - Platform: 1
+    Value: 6
   SampleRateSettings:
   - Platform: 1
-    Value: 48000
+    Value: 44100
   - Platform: 2
     Value: 0
   LiveUpdateSettings:
@@ -45,7 +47,11 @@ MonoBehaviour:
     Value: 1
   - Platform: 2
     Value: 0
-  BankDirectorySettings: []
+  BankDirectorySettings:
+  - Platform: 2
+    Value: Desktop
+  - Platform: 1
+    Value: Desktop
   VirtualChannelSettings:
   - Platform: 1
     Value: 1024
@@ -56,6 +62,12 @@ MonoBehaviour:
     Value: 256
   - Platform: 2
     Value: 32
-  Plugins: []
-  MasterBank: 
+  Plugins:
+  - fmod_distance_filter
+  - fmod_gain
+  - gvraudio
+  - resonanceaudio
+  MasterBanks:
+  - Master Bank
   Banks: []
+  LiveUpdatePort: 9264

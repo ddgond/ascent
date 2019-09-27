@@ -4,8 +4,11 @@ using UnityEngine;
 using Valve.VR;
 using System;
 using System.Runtime.InteropServices;
+using FMODUnity;
 
 public class Climber : MonoBehaviour {
+
+	public StudioEventEmitter eventEmitter;
 
 	public SteamVR_Input_Sources leftHandType;
 	public SteamVR_Input_Sources rightHandType;
@@ -24,7 +27,7 @@ public class Climber : MonoBehaviour {
 	void Start () {
 		lastPosition = transform.position;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (grabPinch.GetStateDown (leftHandType)) {
@@ -47,6 +50,13 @@ public class Climber : MonoBehaviour {
 		Hand grabbingHand = GetGrabbingHand ();
 		if (grabbingHand != null) {
 			transform.position = transform.position - (grabbingHand.GetOffset () - this.GetOffset ());
+			if (transform.position.y < 14) {
+				eventEmitter.SetParameter("Height", 0.5f);
+			} else if (transform.position.y < 23) {
+				eventEmitter.SetParameter("Height", 1.5f);
+			} else {
+				eventEmitter.SetParameter("Height", 2.5f);
+			}
 		}
 		UpdateLastPosition ();
 		UpdateLastHandPositions ();

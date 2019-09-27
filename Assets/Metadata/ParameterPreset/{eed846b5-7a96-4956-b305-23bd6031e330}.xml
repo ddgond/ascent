@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{eed846b5-7a96-4956-b305-23bd6031e330}">
+        <property name="name">
+            <value>Coop</value>
+        </property>
+        <relationship name="folder">
+            <destination>{4c2a0cc1-a064-4e9c-beb6-894dc325c821}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{b5df8601-0c70-4c26-ab9b-ee7b2484b439}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{b5df8601-0c70-4c26-ab9b-ee7b2484b439}">
+        <property name="maximum">
+            <value>3</value>
+        </property>
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
